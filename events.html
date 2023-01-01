@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        * {
+            text-align: center;
+            font-family: monospace;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        .date-para {
+            font-size: 30px;
+            color: magenta;
+        }
+        button {
+            font-size: 25px;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the button below to display the date and time..</h1>
+
+    <button onclick = "displayDate()">SHOW DATE & TIME</button>
+    <p id="date" class="date-para"></p>
+
+    <script>
+        // handler function for the click event on the button
+        function displayDate(){
+            let date = document.querySelector("#date");
+            date.classList.add("date-para");
+            date.textContent = Date();
+        }
+    </script>
+</body>
+</html>

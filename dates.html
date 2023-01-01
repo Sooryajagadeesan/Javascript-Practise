@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Date</title>
+    <style>
+        * {
+            font-family: monospace;
+            text-align: center;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 30px;
+        }
+        button {
+            padding: 20px 10px;
+            border: none;
+            font-size: 20px;
+            border: 1px solid brown;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript Date</h1>
+    <p>The Date class can be used to create instances of dates in our web site.</p>
+    <button onclick="showDate()">Click me to see date</button>
+    <button onclick="showRefinedDate()">Click me to see refined date</button>
+    <p id="date"></p>
+
+
+    <script>
+        let date = new Date();
+        let body = document.querySelector("body");
+        let dateElement = document.querySelector("#date");
+
+        function showDate() {
+            dateElement.innerText = "Date is '" + date +"'";
+        }
+        function showRefinedDate() {
+            dateElement.innerText = `Refined date is '${date.toDateString()}'`;
+        }
+    </script>
+</body>
+</html>

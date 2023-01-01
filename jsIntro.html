@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Introduction</title>
+    <style>
+        * {
+            font-family: monospace;
+            text-align: center;
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 25px;
+        }
+        ul {
+            width: 700px;
+            margin: auto;
+        }
+        li {
+            text-align: left;
+
+        }
+        button {
+            border: none;
+            width: 250px;
+            height: 70px;
+            font-size: 20px;
+            background-color: blueviolet;
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        button:focus {
+            outline: none;
+        } 
+    </style>
+</head>
+<body>
+    <h1>Introduction to Javascript</h1>
+    <p>Javascript is the primary scripting language for HTML.</p>
+    <p>We can think of HTMl, CSS, JS as the 3 primary pillars of front-end Web development. We can come to a conclusion that,</p>
+    <ul list-style-type="square">
+        <li>HTML : Defines the <q>Content</q> of the web page</li>
+        <li>CSS : Defines the <q>Layout</q> for Content of the web page</li>
+        <li>JS : Defines the <q>Behaviour(functionality)</q> of Content of the web page</li>
+    </ul>
+    <h2>What can we do with Javascript?</h2>
+    <ul>
+        <li>We can create Dynamic Pages.</li>
+        <li>We can change the web content using DOM methods.</li>
+        <li>We can handle events.</li>
+        <li>We can give the page an asynchronous behaviour.</li>
+    </ul>
+    <p>An Example of EVENTS,</p>
+    <p id="test-para">Click the button below, to see the change,</p>
+    <button onclick="makeTheChange();">Click Me</button>
+
+
+    <script>
+        function makeTheChange() {
+            let heading = document.createElement('h1');
+            heading.innerText = "Javascript Welcomes You !!!!!";
+            heading.style.fontSize = '50px';
+            heading.style.color = "magenta";
+            heading.style.textAlign = 'center';
+            heading.style.width = `1000px`;
+            heading.style.margin = "auto";
+            heading.style.padding = "400px 0";
+            document.body.innerHTML = "";
+            document.body.appendChild(heading);
+        }
+    </script>
+</body>
+</html>
